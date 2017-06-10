@@ -1,0 +1,43 @@
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+     sh "pod update"
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+      workspace: "LiveStream.xcworkspace",
+      scheme: "LiveStream",
+      configuration: "Debug",
+      skip_build: true
+    )
+  end
+
+
+  lane :beta do |values|
+    # Fabric generated this lane for deployment to Crashlytics Beta
+    # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+    gym(scheme: 'LiveStream', export_method: 'development')
+
+    emails = values[:test_email] ? values[:test_email] : ['lamine.ndy@gmail.com'] 
+    groups = values[:test_email] ? nil : nil
+
+    crashlytics(api_token: 'd194f06d7597e2dc1bd91bdcc494d1c9a30029cb',
+             build_secret: '55945b136a2d1c879274564cd824b285b04d8648e2bdc83bab1e479473366b77',
+                   emails: emails,
+                   groups: groups,
+                    notes: 'Distributed with fastlane', # Check out the changelog_from_git_commits action
+            notifications: true) 
+  end
+
+
+  after_all do |lane|
+  end
+
+end
+
+
+
