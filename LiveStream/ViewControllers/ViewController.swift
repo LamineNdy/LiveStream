@@ -51,7 +51,7 @@ extension ViewController {
 // MARK: - Player
 extension ViewController {
     func presentPlayer() {
-        guard let url = URL(string: Constants.liveStreamUrlString) else {
+        guard let url = URL(string: Constants.liveStreamUrlString()) else {
             return
         }
         let player = AVPlayer(url: url)
