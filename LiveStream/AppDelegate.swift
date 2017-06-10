@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
-
+        
+        Fabric.with([Crashlytics.self])
+        
         return true
     }
 
