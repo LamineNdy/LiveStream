@@ -1,0 +1,35 @@
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+     sh "pod update"
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+      workspace: "LiveStream.xcworkspace",
+      scheme: "LiveStream",
+      configuration: "Debug",
+      skip_build: true
+    )
+  end
+
+  lane :appstore_testflight do
+    cert
+    sigh(force: true)
+    gym(
+      scheme: "LiveStream",
+      workspace: "LiveStream.xcworkspace",
+      configuration: "Release")
+    testflight(skip_waiting_for_build_processing: true) 
+  end
+
+  after_all do |lane|
+  end
+
+end
+
+
+

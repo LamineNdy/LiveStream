@@ -1,0 +1,7 @@
+app_identifier "com.livestreamcompany.player"
+apple_id "lamine.ndy@gmail.com"
+itunes_connect_id = "amine.ndy@gmail.com"
+
+team_id "54SDSGN3MM" # Developer Portal Team ID
+itc_team_id "118223587"
+
