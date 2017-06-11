@@ -40,6 +40,11 @@ Runs all the tests
 fastlane ios beta
 ```
 
+### ios appstore_testflight
+```
+fastlane ios appstore_testflight
+```
+
 
 ----
 
