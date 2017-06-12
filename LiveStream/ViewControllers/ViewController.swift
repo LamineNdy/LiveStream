@@ -36,16 +36,12 @@ extension ViewController {
     
     func initUI() {
         setButtonStyle()
-        setNavTitle()
     }
     
     func setButtonStyle() {
         launchButton.setTitle(NSLocalizedString("Home.Launch", comment: ""), for: .normal)
     }
     
-    func setNavTitle() {
-        title = NSLocalizedString("Home.Title", comment: "")
-    }
 }
 
 // MARK: - Player

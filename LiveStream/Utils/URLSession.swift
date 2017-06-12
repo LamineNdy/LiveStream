@@ -9,7 +9,12 @@
 import Foundation
 
 extension URLSession {
-    private func  swizzlingDataTask () {
+
+    private static let swizzlingDataTask:() = {
+        URLSession.shared.swizzleDataTask()
+    }()
+    
+    func swizzleDataTask () {
         
         let dataTaskSelector =  #selector((URLSession.dataTask(with:)) as (URLSession) -> (URLRequest) -> URLSessionDataTask)
         let originalSelector = dataTaskSelector
@@ -35,9 +40,6 @@ extension URLSession {
             return
         }
         
-        let swizzlingDataTask:() = {
-            URLSession.shared.swizzlingDataTask()
-        }()
         swizzlingDataTask
     }
 }
