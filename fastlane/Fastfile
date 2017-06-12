@@ -19,6 +19,7 @@ platform :ios do
   lane :appstore_testflight do
     cert
     sigh(force: true)
+    increment_build_number
     gym(
       scheme: "LiveStream",
       workspace: "LiveStream.xcworkspace",
