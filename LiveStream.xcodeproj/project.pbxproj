@@ -546,15 +546,15 @@
 			baseConfigurationReference = 8F6A993F9F876BB61B2CAF51 /* Pods-LiveStream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 54SDSGN3MM;
 				INFOPLIST_FILE = LiveStream/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.livestreamcompany.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "46cb12b4-ce39-4c77-81bb-1a8d5495ff71";
+				PROVISIONING_PROFILE_SPECIFIER = "com.livestreamcompany.player AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -572,8 +572,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.livestreamcompany.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9fbf38ad-e10d-4236-845e-53fc90c98f05";
-				PROVISIONING_PROFILE_SPECIFIER = "com.livestreamcompany.player AdHoc 1497135454";
+				PROVISIONING_PROFILE = "46cb12b4-ce39-4c77-81bb-1a8d5495ff71";
+				PROVISIONING_PROFILE_SPECIFIER = "com.livestreamcompany.player AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
