@@ -2,6 +2,8 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
+[![Build Status](https://www.bitrise.io/app/d457a6ebbf4744c0/status.svg?token=WhkgCOgg4dL8M1M0NwodVA&branch=develop)](https://www.bitrise.io/app/d457a6ebbf4744c0)
+
 ### What is this repository for? ###
 
 * Quick summary
