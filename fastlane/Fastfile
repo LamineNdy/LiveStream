@@ -27,7 +27,7 @@ platform :ios do
       output_name: "LiveStream.ipa",
       archive_path: "deploy/",
       configuration: "Release")
-    testflight(skip_waiting_for_build_processing: true) 
+    #testflight(skip_waiting_for_build_processing: true) 
   end
 
   after_all do |lane|
