@@ -18,12 +18,6 @@ platform :ios do
       derived_data_path: "deploy/",
       output_types: "html"
     )
-    coverage
-  end
-  # Code Coverage
-  desc "Code Coverage"
-  lane :coverage do
-    slather
   end
 
   lane :appstore_testflight do
