@@ -12,14 +12,24 @@ platform :ios do
       workspace: "LiveStream.xcworkspace",
       scheme: "LiveStream",
       configuration: "Debug",
-      skip_build: true
+      skip_build: true,
+      code_coverage: true,
+      output_directory: "deploy",
+      derived_data_path: "deploy/",
+      output_types: "html"
     )
+    coverage
+  end
+  # Code Coverage
+  desc "Code Coverage"
+  lane :coverage do
+    slather
   end
 
   lane :appstore_testflight do
-    cert
-    sigh(force: true)
-    increment_build_number
+    #cert
+    #sigh(force: true)
+    # increment_build_number
     gym(
       scheme: "LiveStream",
       workspace: "LiveStream.xcworkspace",
