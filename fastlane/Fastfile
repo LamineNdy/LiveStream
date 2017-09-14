@@ -23,6 +23,9 @@ platform :ios do
     gym(
       scheme: "LiveStream",
       workspace: "LiveStream.xcworkspace",
+      output_directory: "deploy",
+      output_name: "LiveStream.ipa",
+      archive_path: "deploy/",
       configuration: "Release")
     testflight(skip_waiting_for_build_processing: true) 
   end
